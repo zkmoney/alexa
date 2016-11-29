@@ -9,6 +9,8 @@ import (
 	"strconv"
 	"strings"
 
+	"os"
+
 	"github.com/PuerkitoBio/goquery"
 )
 
@@ -28,12 +30,18 @@ func main() {
 
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
 		w.WriteHeader(200)
+		w.Header().Add("Content-Type", "application/json")
 		if err := json.NewEncoder(w).Encode(&movies); err != nil {
 			log.Println("error writing top three:", err)
 		}
 	})
 
-	if err := http.ListenAndServe(":8080", nil); err != nil {
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+
+	if err := http.ListenAndServe(":"+port, nil); err != nil {
 		log.Fatal(err)
 	}
 }
