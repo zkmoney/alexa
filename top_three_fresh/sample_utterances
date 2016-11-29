@@ -1,0 +1,22 @@
+GetTopThreeFreshIntent fresh
+GetTopThreeFreshIntent top fresh
+GetTopThreeFreshIntent top three
+GetTopThreeFreshIntent top three fresh
+GetTopThreeFreshIntent the top three fresh
+GetTopThreeFreshIntent tell me the top three
+GetTopThreeFreshIntent tell me the top three fresh
+GetTopThreeFreshIntent give me the top three
+GetTopThreeFreshIntent give me the top three fresh
+
+GetTopThreeRottenIntent rotten
+GetTopThreeRottenIntent top rotten
+GetTopThreeRottenIntent top three rotten
+GetTopThreeRottenIntent the top three rotten
+GetTopThreeRottenIntent tell me the top three
+GetTopThreeRottenIntent tell me the top three rotten
+GetTopThreeRottenIntent give me the top three
+GetTopThreeRottenIntent give me the top three rotten
+GetTopThreeRottenIntent bottom three
+GetTopThreeRottenIntent the bottom three
+GetTopThreeRottenIntent tell me the bottom three
+GetTopThreeRottenIntent give me the bottom three
