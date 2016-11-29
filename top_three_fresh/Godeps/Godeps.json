@@ -1,9 +1,27 @@
 {
-	"ImportPath": ".",
+	"ImportPath": "github.com/zkmoney/alexa/top_three_fresh",
 	"GoVersion": "go1.7",
 	"GodepVersion": "v75",
 	"Packages": [
 		"./..."
 	],
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/PuerkitoBio/goquery",
+			"Comment": "v0.3.2-78-g60ec77b",
+			"Rev": "60ec77b0032de8548a0d67f76154458850264a99"
+		},
+		{
+			"ImportPath": "github.com/andybalholm/cascadia",
+			"Rev": "54abbbf07a45a3ef346ebe903e0715d9a3c19352"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html",
+			"Rev": "4971afdc2f162e82d185353533d3cf16188a9f4e"
+		},
+		{
+			"ImportPath": "golang.org/x/net/html/atom",
+			"Rev": "4971afdc2f162e82d185353533d3cf16188a9f4e"
+		}
+	]
 }
