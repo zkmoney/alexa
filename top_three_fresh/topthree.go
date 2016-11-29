@@ -31,10 +31,13 @@ func main() {
 	})
 
 	http.HandleFunc("/", func(w http.ResponseWriter, req *http.Request) {
-		w.Header().Set("Content-Type", "application/json")
-		if err := json.NewEncoder(w).Encode(&movies); err != nil {
-			log.Println("error writing top three:", err)
+		content, err := json.Marshal(movies)
+		if err != nil {
+			http.Error(w, err.Error(), http.StatusInternalServerError)
+			return
 		}
+		w.Header().Set("Content-Type", "application/json")
+		w.Write(content)
 	})
 
 	port := os.Getenv("PORT")
