@@ -7,4 +7,4 @@ RUN go build -o /build/topthree
 
 EXPOSE 8080
 
-CMD ["/topthree"]
+CMD ["/build/topthree"]
